@@ -70,7 +70,9 @@ func (s socks4) Dial(network, addr string) (c net.Conn, err error) {
 	// close connection later if we got an error
 	defer func() {
 		if err != nil {
-			_ = c.Close()
+			if c != nil {
+				_ = c.Close()
+			}
 		}
 	}()
 
