@@ -1,4 +1,4 @@
-module github.com/bdandy/go-socks4
+module github.com/finchss/go-socks4
 
 go 1.13
 
